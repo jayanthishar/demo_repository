@@ -1,4 +1,4 @@
-package com.demo.batteries;
+package com.demo.batteries.controllers;
 
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
