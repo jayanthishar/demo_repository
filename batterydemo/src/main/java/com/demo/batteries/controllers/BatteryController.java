@@ -26,7 +26,7 @@ public class BatteryController
     BatteryService service;
  
 	  
-    @PostMapping(path="/createBatteries", consumes = "application/json")
+    @PostMapping(path="/batteries", consumes = "application/json")
 	public ResponseEntity<List<BatteryEntity>> createBattery(@jakarta.validation.Valid @RequestBody List<BatteryEntity> batteryLst) throws RecordNotFoundException {
     	List<BatteryEntity> entity = service.createBatteries(batteryLst);
     	if(entity.size() > 0)
