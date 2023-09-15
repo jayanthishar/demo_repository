@@ -1,23 +1,18 @@
 package com.demo.batteries.controllers;
 
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.OptionalDouble;
-
-import org.hamcrest.Matchers;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.test.web.servlet.MockMvc;
-
-import com.demo.batteries.controllers.BatteryController;
 import com.demo.batteries.model.BatteryDetails;
 import com.demo.batteries.model.BatteryEntity;
 import com.demo.batteries.service.BatteryService;
@@ -34,7 +29,6 @@ public class BatteryControllerTest {
 
   @Test
   public void testfindBatteries() throws Exception {
-	  List<BatteryEntity> batteryLst = new ArrayList<BatteryEntity>();
 		BatteryDetails batteryDtls = new BatteryDetails();
 		List<String> names = Arrays.asList("name1","name2");
 		batteryDtls.setName(names);
